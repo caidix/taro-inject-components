@@ -1,0 +1,46 @@
+{
+  "name": "@caidix/taro-loader-component-inject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm run clean && pnpm run prod",
+    "dev": "tsc -w",
+    "prod": "tsc",
+    "publish": "pnpm run build && npm publish --access private",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "typescript",
+    "react",
+    "webpack",
+    "taro3",
+    "taro"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.8.0",
+    "@babel/generator": "7.23.0",
+    "@babel/parser": "7.23.0",
+    "@babel/template": "^7.22.15",
+    "@babel/traverse": "7.23.0",
+    "@babel/types": "7.23.0",
+    "loader-utils": "1.4.2",
+    "minimatch": "^9.0.3",
+    "schema-utils": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__parser": "^7.1.1",
+    "@types/babel__traverse": "^7.20.5",
+    "@types/node": "^20.11.13",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "@tarojs/helper": ">=3.6.0",
+    "webpack": ">=5.50.0"
+  }
+}
