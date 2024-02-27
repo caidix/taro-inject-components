@@ -2,7 +2,7 @@
 
 ## 全局注入插件
 
-> 全局注入插件用于为每个页面自动注入一些全局组件、方法。
+> 全局注入插件用于为每个页面自动注入一些全局组件、方法。思路来源于前司小程序插件，于此基础之上完善更进以满足全局注入某些吐司、防控等业务需求。
 
 ####
 
@@ -14,7 +14,7 @@
 #### 添加配置
 
 ```javascript
-// taro-air\config\index.js
+// config/index.js
 const UseGlobalComponent = require("@caidix/taro-loader-component-inject");
 
 const config = {
