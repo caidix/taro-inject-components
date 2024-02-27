@@ -1,7 +1,7 @@
 {
   "name": "@caidix/taro-loader-component-inject",
   "version": "0.0.1",
-  "description": "",
+  "description": "基于taro3+react+webpack5注入小程序组件到全局/指定页面",
   "main": "index.js",
   "scripts": {
     "build": "pnpm run clean && tsc",
@@ -13,6 +13,14 @@
     "version:major": "pnpm run build && echo '发布主版本' && standard-version --release-as major",
     "clean": "rimraf dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:caidix/taro-inject-components.git"
+  },
+  "files": [
+    "index.js",
+    "dist"
+  ],
   "keywords": [
     "webpack",
     "loader",
@@ -22,8 +30,9 @@
     "taro3",
     "taro"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "caidix",
+  "license": "MIT",
+  "homepage": "https://github.com/caidix/taro-inject-components#readme",
   "dependencies": {
     "@babel/core": "^7.8.0",
     "@babel/generator": "7.23.0",
