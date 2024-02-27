@@ -6,7 +6,4 @@ export declare const getGlobalComponents: (componentFilePath: string, pagePath: 
  * @param {*} ast
  * @param {*} alias
  */
-export declare const filterInjectedComponents: (ast: AstCodes, filePath: string, comConfigs: ComponentOptionArray, aliasMaping: [
-    string,
-    string
-][]) => ComponentOptionArray;
+export declare const filterInjectedComponents: (ast: AstCodes, filePath: string, comConfigs: ComponentOptionArray, aliasMaping: [string, string][]) => ComponentOptionArray;

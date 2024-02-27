@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm run clean && pnpm run prod",
+    "build": "pnpm run clean && tsc",
     "dev": "tsc -w",
     "prod": "tsc",
-    "publish": "pnpm run build && npm publish --access private",
+    "version:pre": "pnpm run build && echo '发布预发布beta版本' && standard-version --prerelease",
+    "version:patch": "pnpm run build && echo '发布补丁版本' && standard-version --release-as patch",
+    "version:minor": "pnpm run build && echo '发布小版本' && standard-version --release-as minor",
+    "version:major": "pnpm run build && echo '发布主版本' && standard-version --release-as major",
     "clean": "rimraf dist"
   },
   "keywords": [
@@ -37,6 +40,7 @@
     "@types/babel__parser": "^7.1.1",
     "@types/babel__traverse": "^7.20.5",
     "@types/node": "^20.11.13",
+    "standard-version": "^9.5.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

@@ -54,7 +54,4 @@ export declare const getDirPathFromFilePath: (stringPath: any) => any;
   ][]
  * @returns
  */
-export declare const toAbsolutePath: (importPath: string, filePath: string, aliasMaping: [
-    string,
-    string
-][]) => string;
+export declare const toAbsolutePath: (importPath: string, filePath: string, aliasMaping: [string, string][]) => string;
