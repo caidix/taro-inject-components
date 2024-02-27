@@ -109,6 +109,3 @@ export default Hello;
 | injectPosition | 注入组件所处 jsx 的位置                                                                                                                                                            | `bottom`/`top`                                                 | `bottom`             | 否       |
 | customValidate | 自定义处理需要被注入的页面, 传入一个函数，返回 true 时该页面被注入，反之不注入                                                                                                     | (filePath: string) => boolean                                  | `bottom`             | 否       |
 
-```
-
-```
