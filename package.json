@@ -55,5 +55,9 @@
   "peerDependencies": {
     "@tarojs/helper": ">=3.6.0",
     "webpack": ">=5.50.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
