@@ -30,7 +30,7 @@ export const injectImportComponents = (
       const entry = com.entry.split(path.sep).join("/");
       const astCom = template.ast(`import ${com.tagName} from '${entry}';`);
       ast.program.body.unshift(astCom);
-      // printLog(processTypeEnum.CREATE, `注入 ${com.renderTag} 组件成功`);
+      // printLog(processTypeEnum.CREATE, `注入 ${com.tagName} 组件成功`);
     } catch (error) {
       printLog(processTypeEnum.ERROR, `注入 ${com.tagName} 组件失败: ${error}`);
     }
@@ -51,9 +51,9 @@ const injectJSXElement = (pathNode, comConfigs) => {
 
   for (const com of comConfigs) {
     if (com.injectPosition === "top") {
-      pathNode.node.children.unshift(createJSXElement(com.renderTag));
+      pathNode.node.children.unshift(createJSXElement(com.tagName));
     } else {
-      pathNode.node.children.push(createJSXElement(com.renderTag));
+      pathNode.node.children.push(createJSXElement(com.tagName));
     }
   }
 };
@@ -63,7 +63,7 @@ const injectCallExpression = (pathNode, comConfigs, filePath) => {
   if (pathNode.node?.callee?.property?.name === "createElement") {
     const _arguments = pathNode.node.arguments;
     for (const com of comConfigs) {
-      _arguments.push(createReactCallExpression(com.renderTag));
+      _arguments.push(createReactCallExpression(com.tagName));
     }
     return;
   }

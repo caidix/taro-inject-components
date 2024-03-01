@@ -4,7 +4,9 @@
 
 > 全局注入插件用于为每个页面自动注入一些全局组件、方法。思路来源于前司小程序插件，于此基础之上完善更进以满足全局注入某些吐司、防控等业务需求。
 
-####
+#### 安装
+
+> npm i @caidix/taro-loader-component-inject -D
 
 #### 使用前置条件
 
@@ -102,10 +104,9 @@ export default Hello;
 | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- | -------------------- | -------- |
 | enable         | 是否使用该组件，只有填 true 才会被注入                                                                                                                                             | boolean                                                        | false                | 否       |
 | entry          | 被注入的组件的入口，按上面的创建步骤时需要填入: *entry:"index.tsx"*也可以填入*entry:"index.weapp.tsx"*当你的注入文件没有强定义环境时，插件会优先选择存在当前环境下的文件进行注入。 | string                                                         | ``                   | 是       |
-| renderTag      | 注入时的组件名                                                                                                                                                                     | string                                                         | 不填默认为文件目录名 | 否       |
+| tagName        | 注入时的组件名                                                                                                                                                                     | string                                                         | 不填默认为文件目录名 | 否       |
 | includePages   | 组件范围内允许被注入的页面路由集合,要求书写方式与 router 中的路径相同或是[Glob 匹配规则](https://www.npmjs.com/package/minimatch)                                                  | Array<string>                                                  | ``                   | 否       |
 | excludePages   | 组件范围内不允许被注入的页面路由集合,要求书写方式与 router 中的路径相同或是[Glob 匹配规则](https://www.npmjs.com/package/minimatch)                                                | Array<string>                                                  | ``                   | 否       |
 | injectEnv      | 组件允许被注入的环境，不写默认都注入，单个可以写字符串"weapp"，也可写数组["weapp", "qq"]                                                                                           | `weapp` / `swan` / `alipay` / `tt` / `qq` / `jd` / `h5` / `rn` |                      | 否       |
 | injectPosition | 注入组件所处 jsx 的位置                                                                                                                                                            | `bottom`/`top`                                                 | `bottom`             | 否       |
 | customValidate | 自定义处理需要被注入的页面, 传入一个函数，返回 true 时该页面被注入，反之不注入                                                                                                     | (filePath: string) => boolean                                  | `bottom`             | 否       |
-

@@ -23,7 +23,7 @@ const injectImportComponents = (ast, comConfigs) => {
             const entry = com.entry.split(path.sep).join("/");
             const astCom = template_1.default.ast(`import ${com.tagName} from '${entry}';`);
             ast.program.body.unshift(astCom);
-            // printLog(processTypeEnum.CREATE, `注入 ${com.renderTag} 组件成功`);
+            // printLog(processTypeEnum.CREATE, `注入 ${com.tagName} 组件成功`);
         }
         catch (error) {
             (0, helper_1.printLog)("error" /* processTypeEnum.ERROR */, `注入 ${com.tagName} 组件失败: ${error}`);
@@ -46,10 +46,10 @@ const injectJSXElement = (pathNode, comConfigs) => {
     (0, ast_helper_1.wrapJSXClosingElement)(pathNode);
     for (const com of comConfigs) {
         if (com.injectPosition === "top") {
-            pathNode.node.children.unshift((0, ast_helper_1.createJSXElement)(com.renderTag));
+            pathNode.node.children.unshift((0, ast_helper_1.createJSXElement)(com.tagName));
         }
         else {
-            pathNode.node.children.push((0, ast_helper_1.createJSXElement)(com.renderTag));
+            pathNode.node.children.push((0, ast_helper_1.createJSXElement)(com.tagName));
         }
     }
 };
@@ -59,7 +59,7 @@ const injectCallExpression = (pathNode, comConfigs, filePath) => {
     if (((_c = (_b = (_a = pathNode.node) === null || _a === void 0 ? void 0 : _a.callee) === null || _b === void 0 ? void 0 : _b.property) === null || _c === void 0 ? void 0 : _c.name) === "createElement") {
         const _arguments = pathNode.node.arguments;
         for (const com of comConfigs) {
-            _arguments.push((0, ast_helper_1.createReactCallExpression)(com.renderTag));
+            _arguments.push((0, ast_helper_1.createReactCallExpression)(com.tagName));
         }
         return;
     }
