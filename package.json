@@ -1,6 +1,6 @@
 {
   "name": "@caidix/taro-loader-component-inject",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于taro3+react+webpack5注入小程序组件到全局/指定页面",
   "main": "index.js",
   "scripts": {
@@ -50,6 +50,7 @@
     "@types/babel__traverse": "^7.20.5",
     "@types/node": "^20.11.13",
     "standard-version": "^9.5.0",
+    "tsdx": "^0.14.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
