@@ -1,12 +1,12 @@
 {
   "name": "@caidix/taro-loader-component-inject",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "基于taro3+react+webpack5注入小程序组件到全局/指定页面",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm run clean && tsc",
-    "dev": "tsc -w",
-    "prod": "tsc",
+    "build": "tsdx build --format cjs",
+    "dev": "tsdx watch --format cjs",
+    "test": "tsdx test",
     "version:pre": "pnpm run build && echo '发布预发布beta版本' && standard-version --prerelease",
     "version:patch": "pnpm run build && echo '发布补丁版本' && standard-version --release-as patch",
     "version:minor": "pnpm run build && echo '发布小版本' && standard-version --release-as minor",
