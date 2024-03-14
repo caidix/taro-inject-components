@@ -15,7 +15,7 @@
     "baseUrl": ".",
     "outDir": "dist",
     "rootDir": "./src",
-    "module": "commonjs",
+    "module": "ESNext",
     "sourceMap": true,
     "declaration": true
   },

@@ -295,6 +295,7 @@ export const injectComponentTag = (
     case "ClassDeclaration":
     case "ClassExpression":
       handleClass(pathNode, comConfigs, filePath);
+      break;
     case "CallExpression":
       injectCallExpression(pathNode, comConfigs, filePath);
       break;

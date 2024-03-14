@@ -28,7 +28,7 @@ export interface InjectOptions {
      */
     customValidate?: (filePath: string) => boolean;
 }
-export type TARO_ENV = "weapp" | "swan" | "alipay" | "tt" | "qq" | "jd" | "h5" | "rn";
+export declare type TARO_ENV = "weapp" | "swan" | "alipay" | "tt" | "qq" | "jd" | "h5" | "rn";
 export interface InjectComponentOptions {
     enable: boolean;
     entry: string;
@@ -45,4 +45,4 @@ export interface InjectComponentOptions {
 export interface ComponentOptionArray extends Array<InjectComponentOptions> {
     __import_path__?: Record<string, InjectComponentOptions>;
 }
-export type AstCodes = ParseResult<t.File>;
+export declare type AstCodes = ParseResult<t.File>;

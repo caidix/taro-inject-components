@@ -29,7 +29,7 @@ export declare const crytoCode: (code: any) => string;
  * @param len 生成唯一键的长度
  * @returns {string}
  */
-export declare const randomString: (len?: number) => string;
+export declare const randomString: (len?: number | undefined) => string;
 /**
  * 去掉变量中的所有非法符号,并将命名转换成大驼峰格式,
  * 用于引入组件名和插入组件标签的生成, 默认为 InjectGlobalComp(XXXX)

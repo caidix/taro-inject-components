@@ -17,7 +17,7 @@ export declare const createJSXElement: (name: any) => t.JSXElement;
  * @return {*}
  */
 export declare const createReactCallExpression: (name: any) => t.CallExpression;
-type ExportNode = NodePath<t.ExportDefaultDeclaration> | undefined;
+declare type ExportNode = NodePath<t.ExportDefaultDeclaration> | undefined;
 /**
  * 获取默认导出块
  * @description 默认页面组件到处时应采用 export default XX 的形式导出
