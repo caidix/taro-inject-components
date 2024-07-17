@@ -2,11 +2,15 @@
 
 ## 全局注入插件
 
-> 全局注入插件用于为每个页面自动注入一些全局组件、方法。思路来源于前司小程序插件，于此基础之上完善更进以满足全局注入某些吐司、防控等业务需求。
+> 全局注入插件用于为每个页面自动注入一些全局组件、方法。思路来源于前司小程序插件，于此基础之上完善更进以满足全局注入某些吐司、防控等业务需求。目前实践范围仅为小程序端，H5端由于可以直接注入根目录，未使用。
 
 #### 安装
 
 > npm i @caidix/taro-loader-component-inject -D
+
+#### 最简 DEMO 看这里
+
+[DEMO](https://github.com/caidix/taro-inject-components/tree/main)
 
 #### 使用前置条件
 
@@ -27,9 +31,10 @@ const config = {
         .use("taro-loader-component-inject")
         .loader("@caidix/taro-loader-component-inject")
         .options({
-          // options
+          // 是否使用
           enable: true,
-          includesPages: ["pages/index/index"],
+          // 不写参数默认全局
+          includePages: ["pages/index/index"],
         })
         .end();
     },
