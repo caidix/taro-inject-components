@@ -1,0 +1,9 @@
+{
+  "enable": true,
+  "entry": "index.tsx",
+  "tagName": "FToast",
+  "injectPosition": "bottom",
+  "includePages": [],
+  "excludePages": [],
+  "injectAirline": []
+}

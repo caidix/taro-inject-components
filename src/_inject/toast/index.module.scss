@@ -1,0 +1,27 @@
+.toast {
+  :global {
+    .toast-body {
+      min-width: auto;
+      .toast-body-content__img-item {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
+.weapp {
+  :global {
+    .toast-body {
+      padding: 40 20px;
+    }
+  }
+}
+
+.tt {
+  :global {
+    .toast-body {
+      padding: 40px;
+    }
+  }
+}
